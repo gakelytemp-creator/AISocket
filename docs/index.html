@@ -1,1 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AISocket — From your garden to the Moon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+  :root {
+    --paper: #f5f0e8;
+    --paper-2: #ede8dc;
+    --ink: #2c2a1e;
+    --muted: #5f5e5a;
+    --line: #d3d1c7;
+    --blue: #2563eb;
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .page {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0.85rem 1rem 4rem;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    height: clamp(190px, 24vw, 250px); /* low website header; do not make it tall */
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 3rem;
+    background: #d8c69f;
+    box-shadow: 0 1px 0 rgba(44,42,30,0.08);
+  }
+
+  .hero img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: left center;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0 0 0 auto;
+    width: 56%;
+    padding: 1.55rem 1.8rem 1.35rem 1.25rem;
+    background: linear-gradient(
+      to left,
+      rgba(10, 8, 4, 0.78) 0%,
+      rgba(10, 8, 4, 0.62) 42%,
+      rgba(10, 8, 4, 0.18) 78%,
+      transparent 100%
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    text-align: right;
+  }
+
+  .hero-title {
+    max-width: 390px;
+    font-size: clamp(22px, 2.55vw, 28px);
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+    text-shadow: 0 2px 14px rgba(0,0,0,0.45);
+    margin-top: -0.2rem;
+  }
+
+  .hero-sub {
+    margin-top: 2.05rem;
+    background: rgba(37, 99, 235, 0.92);
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.25;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.16);
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-top: 0.6rem;
+  }
+
+  .btn-dark,
+  .btn-ghost,
+  .btn-warm,
+  .btn-outline {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 9px;
+    font-weight: 500;
+    transition: transform 150ms ease, background 150ms ease, border-color 150ms ease;
+  }
+
+  .btn-dark:hover,
+  .btn-ghost:hover,
+  .btn-warm:hover,
+  .btn-outline:hover { transform: translateY(-1px); }
+
+  .btn-dark {
+    min-width: 120px;
+    background: var(--paper);
+    color: var(--ink);
+    padding: 10px 22px;
+    font-size: 15px;
+  }
+
+  .btn-ghost {
+    min-width: 132px;
+    background: rgba(245,240,232,0.09);
+    color: var(--paper);
+    border: 1px solid rgba(245,240,232,0.35);
+    padding: 10px 22px;
+    font-size: 15px;
+    backdrop-filter: blur(2px);
+  }
+
+  /* ── SECTIONS ── */
+  .section { margin-bottom: 3rem; }
+
+  .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #888780;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 0.75rem;
+  }
+
+  p.lead {
+    font-size: 15px;
+    color: var(--muted);
+    max-width: 700px;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: 0 0 3rem;
+  }
+
+  /* ── STEPS ── */
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+    margin-top: 1.5rem;
+  }
+
+  .step {
+    background: var(--paper-2);
+    border-radius: 10px;
+    padding: 1.25rem;
+  }
+
+  .step-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: #888780;
+    margin-bottom: 0.5rem;
+  }
+
+  .step h3 {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 0.4rem;
+  }
+
+  .step p {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  /* ── CODE ── */
+  .pip {
+    display: inline-block;
+    background: var(--paper-2);
+    border-radius: 8px;
+    padding: 0.6rem 1.2rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: #444441;
+    margin-top: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .pip span { color: #888780; }
+
+  .code {
+    background: var(--ink);
+    border-radius: 10px;
+    padding: 1.5rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    line-height: 1.9;
+    overflow-x: auto;
+  }
+
+  .cm { color: #6a6858; }
+  .ck { color: #9FE1CB; }
+  .cs { color: #FAC775; }
+  .cf { color: #AFA9EC; }
+  .cb { color: var(--paper); }
+
+  /* ── PLATFORMS ── */
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 1.25rem;
+  }
+
+  .tag {
+    background: var(--paper-2);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 5px 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: #444441;
+  }
+
+  /* ── JOURNEY ── */
+  .journey {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 1px;
+    background: var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 1.5rem;
+  }
+
+  .stop {
+    background: var(--paper);
+    padding: 1.1rem 0.75rem;
+    text-align: center;
+  }
+
+  .stop-icon { font-size: 20px; margin-bottom: 0.4rem; }
+  .stop-name { font-size: 13px; font-weight: 500; color: var(--ink); }
+  .stop-sub  { font-size: 11px; color: #888780; margin-top: 2px; }
+
+  /* ── CTA ── */
+  .cta {
+    background: var(--ink);
+    border-radius: 12px;
+    padding: 2rem 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .cta-title { font-size: 20px; font-weight: 500; color: var(--paper); }
+  .cta-sub   { font-size: 14px; color: rgba(245,240,232,0.55); margin-top: 4px; }
+  .cta-btns  { display: flex; gap: 10px; flex-wrap: wrap; }
+
+  .btn-warm {
+    background: var(--paper);
+    color: var(--ink);
+    padding: 10px 22px;
+    font-size: 14px;
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--paper);
+    border: 1px solid rgba(245,240,232,0.35);
+    padding: 10px 22px;
+    font-size: 14px;
+  }
+
+  @media (max-width: 760px) {
+    .page { padding: 0.75rem 0.75rem 3rem; }
+
+    .hero {
+      height: 205px;
+      border-radius: 12px;
+    }
+
+    .hero img { object-position: left center; }
+
+    .hero-overlay {
+      width: 72%;
+      padding: 1rem 1rem 0.9rem;
+      background: linear-gradient(to left, rgba(10,8,4,0.8) 0%, rgba(10,8,4,0.46) 72%, transparent 100%);
+    }
+
+    .hero-title { font-size: 20px; max-width: 280px; }
+    .hero-sub { font-size: 12px; margin-top: 1.15rem; }
+    .hero-btns { margin-top: 0.45rem; gap: 7px; }
+    .btn-dark, .btn-ghost { min-width: auto; padding: 8px 13px; font-size: 13px; }
+
+    .cta { padding: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HERO -->
+  <header class="hero" aria-label="AISocket project hero">
+    <img src="hero.png" alt="Child building a tracked robot with a smartphone vision sensor and engineering sketches">
+    <div class="hero-overlay">
+      <h1 class="hero-title">From your garden to the Moon,<br>with one library.</h1>
+      <div class="hero-sub">Any LLM. Any machine. Safely.</div>
+      <div class="hero-btns">
+        <a class="btn-dark" href="https://github.com/gakelytemp-creator/AISocket">GitHub</a>
+        <a class="btn-ghost" href="https://github.com/gakelytemp-creator/AISocket#quickstart">Quick Start</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- WHY -->
+  <section class="section">
+    <div class="label">The problem</div>
+    <h2>LLMs are brilliant. Bodies are dumb. There's no bridge.</h2>
+    <p class="lead">An LLM enters an unknown machine the same way a human enters an unfamiliar SQL terminal — blind. AISocket gives every device a readable identity: what it can do, what it must never do, and how to ask for help when it gets stuck.</p>
+  </section>
+
+  <hr>
+
+  <!-- HOW -->
+  <section class="section">
+    <div class="label">How it works</div>
+    <h2>Four steps. Any device.</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01 — passport</div>
+        <h3>Body declares itself</h3>
+        <p>Capabilities, forbidden actions, risk class, autonomous mandate — all in one structured object.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02 — law</div>
+        <h3>Every command validated</h3>
+        <p>6-layer check: firmware rules → capabilities → emergency → offline mandate → delegation → context.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03 — connect</div>
+        <h3>LLM wears the body</h3>
+        <p>The LLM receives a structured prompt — not raw UI. It speaks commands, not clicks.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">04 — learn</div>
+        <h3>Community improves it</h3>
+        <p>Bugs, tactics, benchmarks — all go into the shared prompt repository. Every body learns from every incident.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- CODE -->
+  <section class="section">
+    <div class="label">Code</div>
+    <h2>Five lines to get started.</h2>
+    <div class="pip"><span>$ </span>pip install aisocket</div>
+    <div class="code">
+      <span class="cm"># define your body's passport</span><br>
+      <span class="cb">passport = </span><span class="cf">Passport</span><span class="cb">(</span><span class="cs">"mower_v1"</span><span class="cb">)</span><br>
+      <span class="cb">passport.</span><span class="cf">capability</span><span class="cb">(</span><span class="cs">"mow_grass"</span><span class="cb">, </span><span class="cs">"report_status"</span><span class="cb">)</span><br>
+      <span class="cb">passport.</span><span class="cf">forbidden</span><span class="cb">(</span><span class="cs">"harm_human"</span><span class="cb">, </span><span class="cs">"enter_building"</span><span class="cb">)</span><br>
+      <span class="cb">passport.</span><span class="cf">connect</span><span class="cb">(llm=</span><span class="cs">"gemini-flash"</span><span class="cb">)</span><br>
+      <br>
+      <span class="cm"># LLM now operates within body law</span>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- PLATFORMS -->
+  <section class="section">
+    <div class="label">Platforms</div>
+    <h2>One protocol, every platform.</h2>
+    <div class="tags">
+      <span class="tag">Arduino / ESP32</span>
+      <span class="tag">Raspberry Pi</span>
+      <span class="tag">Android</span>
+      <span class="tag">iOS</span>
+      <span class="tag">Linux</span>
+      <span class="tag">Windows</span>
+      <span class="tag">ROS2</span>
+      <span class="tag">Browser / WebSocket</span>
+      <span class="tag">SIM800 / GSM</span>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- JOURNEY -->
+  <section class="section">
+    <div class="label">From here to there</div>
+    <h2>The same passport — everywhere.</h2>
+    <div class="journey">
+      <div class="stop">
+        <div class="stop-icon">🌱</div>
+        <div class="stop-name">Garden</div>
+        <div class="stop-sub">mower, irrigation</div>
+      </div>
+      <div class="stop">
+        <div class="stop-icon">🏠</div>
+        <div class="stop-name">Home</div>
+        <div class="stop-sub">lift, security</div>
+      </div>
+      <div class="stop">
+        <div class="stop-icon">🏙️</div>
+        <div class="stop-name">City</div>
+        <div class="stop-sub">17,000 bodies</div>
+      </div>
+      <div class="stop">
+        <div class="stop-icon">⚕️</div>
+        <div class="stop-name">Crisis</div>
+        <div class="stop-sub">emergency protocol</div>
+      </div>
+      <div class="stop">
+        <div class="stop-icon">🌙</div>
+        <div class="stop-name">Moon</div>
+        <div class="stop-sub">autonomous mandate</div>
+      </div>
+      <div class="stop">
+        <div class="stop-icon">🔴</div>
+        <div class="stop-name">Mars</div>
+        <div class="stop-sub">40 min delay</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div>
+      <div class="cta-title">This belongs to everyone.</div>
+      <div class="cta-sub">Open source. No vendor lock-in. Community governed.</div>
+    </div>
+    <div class="cta-btns">
+      <a class="btn-warm" href="https://github.com/gakelytemp-creator/AISocket">View on GitHub</a>
+      <a class="btn-outline" href="https://github.com/gakelytemp-creator/AISocket/blob/main/CONSTITUTION.md">Read the constitution</a>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
