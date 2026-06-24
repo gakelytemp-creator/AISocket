@@ -2,7 +2,7 @@
 
 > From your garden to the Moon — one library.
 
-[![Website](https://img.shields.io/badge/Website-googuly.online%2Faisocket-blue)](https://googuly.online/aisocket)
+[![Website](https://img.shields.io/badge/Website-googuly.online%2Faisocket-blue)]([https://googuly.online/aisocket](https://gakelytemp-creator.github.io/AISocket/))
 [![GitHub](https://img.shields.io/badge/GitHub-AISocket-black)](https://github.com/gakelytemp-creator/AISocket)
 [![Forum](https://img.shields.io/badge/Forum-Discussions-green)](https://github.com/gakelytemp-creator/AISocket/discussions)
 
