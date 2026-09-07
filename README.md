@@ -2,7 +2,9 @@
 
 > From your garden to the Moon — one library.
 
-[Website](https://gakelytemp-creator.github.io/AISocket/) · [GitHub](https://github.com/gakelytemp-creator/AISocket) · [Discussions](https://github.com/gakelytemp-creator/AISocket/discussions)
+[![Website](https://img.shields.io/badge/Website-googuly.online%2Faisocket-blue)](https://googuly.online/aisocket)
+[![GitHub](https://img.shields.io/badge/GitHub-AISocket-black)](https://github.com/gakelytemp-creator/AISocket)
+[![Forum](https://img.shields.io/badge/Forum-Discussions-green)](https://github.com/gakelytemp-creator/AISocket/discussions)
 
 **AISocket is an open protocol and developing ecosystem for connecting intelligence to autonomous devices, software, and experimental environments through declared capabilities, authorized access, local safety rules, and reusable experience.**
 
