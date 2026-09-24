@@ -146,7 +146,7 @@ It receives a **mandate**.
 
 ---
 
-## Four Principles
+## Five Principles
 
 ### 1. Invitation, not intrusion
 
@@ -186,6 +186,30 @@ AISocket therefore treats observation, action, conditions, and outcome as struct
 A trace is not automatically truth.
 
 It is evidence of what happened.
+
+### 5. Agreement is not physical evidence
+
+Several models may agree and still share the same blind spot.
+
+A repeated interpretation may be useful, but recurrence is not proof.
+
+AISocket should therefore keep model agreement, procedural approval, and real-world evidence separate.
+
+~~~text
+model interpretation
+        ≠
+sensor trace
+        ≠
+replicated intervention
+        ≠
+settled reusable knowledge
+~~~
+
+When a question can be tested through the body, the system should prefer a discriminating observation or bounded experiment over merely collecting more fluent agreement.
+
+This follows the same methodological boundary sharpened in [AI Assembly Session 002](https://github.com/gakelytemp-creator/AI-Assembly/tree/main/OPEN_DISCOURSES/SESSION_002_CAUSAL_ATTRIBUTION_UNDER_UNCERTAINTY):
+
+> **Agreement is not truth; recurrence is not proof.**
 
 ---
 
@@ -357,6 +381,11 @@ records what happened
         ↓
 comparison / replication / interpretation
         ↓
+Noepedia staging / contribution
+        ↓
+Socratic Daimonion
+clarifies / compares / preserves provenance / mediates placement
+        ↓
 Noepedia
 preserves what has become reusable knowledge
 ```
@@ -375,13 +404,15 @@ AISocket moves already-known **action** into stable local machinery.
 
 Noepedia moves already-known **knowledge** into a persistent, addressable semiotic structure.
 
-Together they form a loop:
+Together they form a loop, but **AISocket does not write directly into settled Noepedia knowledge**.
 
-```text
+~~~text
 Noepedia
-validated local knowledge projection
         ↓
-AISocket passport + Body Law
+Socratic Daimonion
+retrieves a task-relevant semiotic cut
+        ↓
+participant + AISocket passport + Body Law
         ↓
 observe / test / act
         ↓
@@ -391,14 +422,20 @@ real-world outcome
         ↓
 comparison / replication / revision
         ↓
+staging / contribution
+        ↓
+Socratic Daimonion
+        ↓
 Noepedia
-```
+~~~
 
 The world does not merely receive answers from intelligence.
 
 **It returns evidence.**
 
-And once that evidence becomes reliable knowledge, the next participant should not have to rediscover it from zero.
+The Daimonion is the knowledge-side transaction boundary: it can ask for clarification, preserve uncertainty, check provenance, control placement, and keep a temporary interpretation from silently becoming permanent shared knowledge.
+
+Once evidence has genuinely become reusable knowledge, the next participant should not have to rediscover it from zero.
 
 ---
 
@@ -433,6 +470,8 @@ Their interfaces should simply fit together.
 AISocket does not require the invited participant to know everything.
 
 A useful participant may instead be very good at **working with what is known and identifying what is not**.
+
+It also does not need to carry all settled knowledge internally. When Noepedia is available, the participant can request a task-relevant relational cut through the Socratic Daimonion rather than reconstructing the whole map from model weights or a giant prompt.
 
 It may carry skills such as:
 
@@ -529,6 +568,39 @@ The interface is the contract between them.
 
 ---
 
+## Browser-First Microcontroller Programming
+
+A major development target is to make the **entire visible programming workflow for supported microcontrollers available from the browser**, without requiring a traditional desktop IDE.
+
+The browser should eventually support:
+
+~~~text
+select / identify board
+→ load or create AISocket passport
+→ edit firmware
+→ inspect Body Law
+→ compile
+→ flash
+→ open serial / telemetry console
+→ run self-test
+→ inspect traces
+→ revise
+~~~
+
+This does **not** move safety-critical law into JavaScript or into an LLM.
+
+The browser is the workshop.
+
+The flashed device remains the safety boundary.
+
+Local watchdogs, emergency behavior, hard limits, offline rules, and other non-negotiable mechanisms must continue to execute in the body even if the browser closes or the network disappears.
+
+Possible transports include browser-accessible serial or USB mechanisms where supported. The exact compiler and flashing machinery remains an implementation question; browser-resident toolchains are preferred where practical, with the user-facing workflow remaining browser-only.
+
+See [BROWSER_MCU_WORKSHOP.md](BROWSER_MCU_WORKSHOP.md).
+
+---
+
 ## Quick Start
 
 The project is still developing, so the best starting point depends on what you want to do.
@@ -537,7 +609,9 @@ The project is still developing, so the best starting point depends on what you 
 - Browse the repository: **[github.com/gakelytemp-creator/AISocket](https://github.com/gakelytemp-creator/AISocket)**
 - Join discussion: **[GitHub Discussions](https://github.com/gakelytemp-creator/AISocket/discussions)**
 
-The Python implementation is the current starting point. Additional platforms are under development.
+This repository currently contains the protocol direction, architectural documentation, and website. Implementation packages should be marked as available only when they are actually archived and testable from this repository or explicitly linked from it.
+
+The first implementation direction should include the browser-first Arduino / ESP32 workflow described above.
 
 We would rather mark a feature experimental than pretend it is finished.
 
@@ -545,14 +619,16 @@ We would rather mark a feature experimental than pretend it is finished.
 
 ## Platforms
 
-| Platform            | Status         |
-| ------------------- | -------------- |
-| Python              | ✅ Ready        |
-| Arduino / ESP32     | 🔄 In progress |
-| Raspberry Pi        | 🔄 In progress |
-| Android             | 🔄 In progress |
-| ROS2                | ⬜ Planned      |
-| Browser / WebSocket | ⬜ Planned      |
+| Platform / surface | Status |
+| ------------------ | ------ |
+| Protocol / architecture docs | ✅ Present |
+| Python reference implementation | ⬜ Not archived here yet |
+| Arduino / ESP32 | 🎯 First hardware target |
+| Browser MCU workshop | 🎯 Architectural target |
+| Raspberry Pi | ⬜ Planned |
+| Android | ⬜ Planned |
+| ROS2 | ⬜ Planned |
+| Browser / WebSocket runtime transport | ⬜ Planned |
 
 Platform support, examples, and maturity should remain explicitly versioned as development continues.
 
@@ -627,6 +703,8 @@ Independent products and services may be built around the open protocol in accor
 The next architectural work is not only to add more device commands.
 
 It is to make the boundary between **local skill, investigation, evidence, and reusable knowledge** increasingly explicit.
+
+We also want one of the first complete implementation loops to begin **in the browser**: edit firmware, compile, flash a small microcontroller, inspect its passport and traces, and repeat without installing a conventional desktop IDE.
 
 We want to test complete loops:
 
