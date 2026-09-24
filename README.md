@@ -437,6 +437,10 @@ The Daimonion is the knowledge-side transaction boundary: it can ask for clarifi
 
 Once evidence has genuinely become reusable knowledge, the next participant should not have to rediscover it from zero.
 
+AISocket is also the intended first **live trace producer** for the Noepedia implementation pilot. For that pilot, traces should carry enough context to preserve BODY_ID, passport version, firmware/configuration version, actor/mandate, tool, target object, pre-state, action or measurement, parameters, units, calibration reference, result, alarms, raw-artifact references, and local safety decisions where applicable.
+
+The detailed cross-project requirements are recorded in Noepedia: [PILOT_AISOCKET_OPENPCB.md](https://github.com/gakelytemp-creator/Noepedia/blob/main/PILOT_AISOCKET_OPENPCB.md).
+
 ---
 
 ## AISocket + OpenPCB Commons
