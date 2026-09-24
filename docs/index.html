@@ -338,10 +338,10 @@
     <img src="hero.png" alt="Child building a tracked robot with a smartphone vision sensor and engineering sketches">
     <div class="hero-overlay">
       <h1 class="hero-title">From your garden to the Moon,<br>with one library.</h1>
-      <div class="hero-sub">Any LLM. Any machine. Safely.</div>
+      <div class="hero-sub">Authorized intelligence. Bounded bodies. Auditable traces.</div>
       <div class="hero-btns">
         <a class="btn-dark" href="https://github.com/gakelytemp-creator/AISocket">GitHub</a>
-        <a class="btn-ghost" href="https://github.com/gakelytemp-creator/AISocket#quickstart">Quick Start</a>
+        <a class="btn-ghost" href="https://github.com/gakelytemp-creator/AISocket#quick-start">Quick Start</a>
       </div>
     </div>
   </header>
@@ -349,8 +349,8 @@
   <!-- WHY -->
   <section class="section">
     <div class="label">The problem</div>
-    <h2>LLMs are brilliant. Bodies are dumb. There's no bridge.</h2>
-    <p class="lead">An LLM enters an unknown machine the same way a human enters an unfamiliar SQL terminal — blind. AISocket gives every device a readable identity: what it can do, what it must never do, and how to ask for help when it gets stuck.</p>
+    <h2>Local bodies can be competent. Intelligence still needs a bridge.</h2>
+    <p class="lead">A controller may already know how to move, stop, recover, measure, or protect itself. AISocket makes that local world legible to an authorized participant: what can be observed, what can be tested, what can be done, what is forbidden, and what evidence returns after action.</p>
   </section>
 
   <hr>
@@ -371,33 +371,29 @@
         <p>6-layer check: firmware rules → capabilities → emergency → offline mandate → delegation → context.</p>
       </div>
       <div class="step">
-        <div class="step-num">03 — connect</div>
-        <h3>LLM wears the body</h3>
-        <p>The LLM receives a structured prompt — not raw UI. It speaks commands, not clicks.</p>
+        <div class="step-num">03 — mandate</div>
+        <h3>Participant enters with limits</h3>
+        <p>A human, model, or specialized process receives only the tools and permissions needed for the task.</p>
       </div>
       <div class="step">
-        <div class="step-num">04 — learn</div>
-        <h3>Community improves it</h3>
-        <p>Bugs, tactics, benchmarks — all go into the shared prompt repository. Every body learns from every incident.</p>
+        <div class="step-num">04 — trace</div>
+        <h3>Experience leaves evidence</h3>
+        <p>Observations, actions, conditions, and outcomes remain inspectable. Trace is evidence — not automatically truth or shared knowledge.</p>
       </div>
     </div>
   </section>
 
   <hr>
 
-  <!-- CODE -->
+  <!-- BROWSER MCU -->
   <section class="section">
-    <div class="label">Code</div>
-    <h2>Five lines to get started.</h2>
-    <div class="pip"><span>$ </span>pip install aisocket</div>
-    <div class="code">
-      <span class="cm"># define your body's passport</span><br>
-      <span class="cb">passport = </span><span class="cf">Passport</span><span class="cb">(</span><span class="cs">"mower_v1"</span><span class="cb">)</span><br>
-      <span class="cb">passport.</span><span class="cf">capability</span><span class="cb">(</span><span class="cs">"mow_grass"</span><span class="cb">, </span><span class="cs">"report_status"</span><span class="cb">)</span><br>
-      <span class="cb">passport.</span><span class="cf">forbidden</span><span class="cb">(</span><span class="cs">"harm_human"</span><span class="cb">, </span><span class="cs">"enter_building"</span><span class="cb">)</span><br>
-      <span class="cb">passport.</span><span class="cf">connect</span><span class="cb">(llm=</span><span class="cs">"gemini-flash"</span><span class="cb">)</span><br>
-      <br>
-      <span class="cm"># LLM now operates within body law</span>
+    <div class="label">Browser workshop</div>
+    <h2>Program supported microcontrollers from the browser.</h2>
+    <p class="lead">The target workflow is browser-first: select a board, edit firmware, inspect the AISocket passport and Body Law, compile, flash, open telemetry, run self-tests, and inspect traces — without requiring a conventional desktop IDE. The browser is the workshop; safety-critical law remains enforced in the flashed device.</p>
+    <div class="pip"><span>target → </span>edit → compile → flash → test → trace</div>
+    <p class="lead">This is an architectural target, not a claim that the browser toolchain is already implemented in this repository.</p>
+    <div style="margin-top:1rem;">
+      <a class="btn-outline" style="color:var(--ink);border-color:var(--line);" href="https://github.com/gakelytemp-creator/AISocket/blob/main/BROWSER_MCU_WORKSHOP.md">Read the browser MCU plan</a>
     </div>
   </section>
 
@@ -408,15 +404,13 @@
     <div class="label">Platforms</div>
     <h2>One protocol, every platform.</h2>
     <div class="tags">
-      <span class="tag">Arduino / ESP32</span>
-      <span class="tag">Raspberry Pi</span>
-      <span class="tag">Android</span>
-      <span class="tag">iOS</span>
-      <span class="tag">Linux</span>
-      <span class="tag">Windows</span>
-      <span class="tag">ROS2</span>
-      <span class="tag">Browser / WebSocket</span>
-      <span class="tag">SIM800 / GSM</span>
+      <span class="tag">Protocol docs — present</span>
+      <span class="tag">Arduino / ESP32 — first target</span>
+      <span class="tag">Browser MCU workshop — target</span>
+      <span class="tag">Raspberry Pi — planned</span>
+      <span class="tag">Android — planned</span>
+      <span class="tag">ROS2 — planned</span>
+      <span class="tag">WebSocket transport — planned</span>
     </div>
   </section>
 
@@ -468,7 +462,7 @@
     </div>
     <div class="cta-btns">
       <a class="btn-warm" href="https://github.com/gakelytemp-creator/AISocket">View on GitHub</a>
-      <a class="btn-outline" href="https://github.com/gakelytemp-creator/AISocket/blob/main/CONSTITUTION.md">Read the constitution</a>
+      <a class="btn-outline" href="https://github.com/gakelytemp-creator/AISocket/blob/main/README.md">Read the architecture</a>
     </div>
   </section>
 
