@@ -173,9 +173,21 @@ If a machine already knows how to move one axis, read a sensor, home itself, clo
 AISocket tries to move already-known action into stable local machinery and reserve intelligence for novelty.
 
 ```text
-known action      → local execution
-unknown situation → intelligence
+settled action / settled scene
+        → compiled local execution
+
+unknown / anomalous scene
+        → Daimonion reconstruction
+        → intelligence / human / experiment
 ```
+
+The important boundary is not merely "simple command versus difficult command."
+
+A natural-language request may look simple while still hiding a missing participant, role, goal, or physical dependency.
+
+Before a generative answer becomes action, the task should be reconstructed as a physical/semiotic scene: what object must move, what state is intended, which body is responsible, and what result would count as success.
+
+Once those conditions become explicit and stable, the generative path should disappear from repeated execution.
 
 ### 4. Experience should leave a usable trace
 
@@ -433,7 +445,7 @@ The world does not merely receive answers from intelligence.
 
 **It returns evidence.**
 
-The Daimonion is the knowledge-side transaction boundary: it can ask for clarification, preserve uncertainty, check provenance, control placement, and keep a temporary interpretation from silently becoming permanent shared knowledge.
+The Daimonion is the knowledge-side transaction boundary and scene-builder: it can reconstruct the task behind a semantic request, ask for clarification, preserve uncertainty, choose an appropriate working mega-graph, check provenance, control placement, and keep a temporary interpretation from silently becoming permanent shared knowledge.
 
 Once evidence has genuinely become reusable knowledge, the next participant should not have to rediscover it from zero.
 
