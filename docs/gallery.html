@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AISocket Project Gallery</title>
+<meta name="description" content="AISocket reference projects: practical bodies, investigators and interfaces for bounded intelligence.">
+<style>
+:root{--bg:#0b1020;--panel:#121a2d;--panel2:#17223a;--text:#eaf0ff;--muted:#9eb0d0;--line:#263657;--accent:#79b8ff;--accent2:#86efac;--warn:#fbbf24}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at top,#17213b 0,#0b1020 42%,#080c17 100%);color:var(--text);line-height:1.55}
+a{color:inherit}
+.wrap{max-width:1180px;margin:auto;padding:28px 22px 70px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:34px}
+.brand{font-weight:800;letter-spacing:.03em}
+.nav a{display:inline-block;text-decoration:none;border:1px solid var(--line);padding:8px 12px;border-radius:10px;margin-left:8px;color:var(--muted)}
+.hero{padding:46px 0 34px;max-width:900px}
+.kicker{color:var(--accent2);font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem}
+h1{font-size:clamp(2.4rem,6vw,5.4rem);line-height:.98;margin:.25em 0 .28em;letter-spacing:-.05em}
+.hero p{font-size:1.08rem;color:var(--muted);max-width:760px}
+.note{border-left:3px solid var(--warn);padding:10px 14px;background:#12192a;color:#cbd6ea;border-radius:0 10px 10px 0;margin-top:22px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;margin-top:28px}
+.card{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 12px 35px rgba(0,0,0,.18)}
+.art{height:210px;background:#0d1527;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:center;padding:12px}
+.art svg{width:100%;height:100%}
+.body{padding:20px}
+.badges{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:11px}
+.badge{font-size:.74rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;border:1px solid #365078;color:#b9cdf2;border-radius:999px;padding:4px 8px}
+.badge.plan{border-color:#6d5b22;color:#f7d76e}
+.badge.proto{border-color:#276241;color:#9ff0bd}
+h2{font-size:1.25rem;margin:.2rem 0 .5rem}
+p{margin:.45rem 0}
+.small{font-size:.92rem;color:var(--muted)}
+.arch{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.82rem;color:#c9d9f4;background:#0b1222;border:1px solid #223253;border-radius:10px;padding:10px;margin-top:12px}
+footer{margin-top:50px;padding-top:22px;border-top:1px solid var(--line);color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div class="brand">AISocket</div>
+    <div class="nav">
+      <a href="./">Home</a>
+      <a href="https://github.com/gakelytemp-creator/AISocket">GitHub</a>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="kicker">Reference-project gallery</div>
+    <h1>Bodies worth building.</h1>
+    <p>A working shelf of AISocket projects: small, reproducible machines and interfaces that turn the architecture into something a second person can actually build, test and criticize.</p>
+    <div class="note"><strong>Status matters:</strong> these cards are not claims of finished products. They are build targets. Photos, schematics, 3D models, BOMs, firmware and video instructions will replace the provisional illustrations as the projects are completed.</div>
+  </section>
+
+  <section class="grid">
+
+    <article class="card">
+      <div class="art">
+        <svg viewBox="0 0 640 320" role="img" aria-label="Optical nervous system diagram">
+          <defs><linearGradient id="g1" x1="0" x2="1"><stop stop-color="#60a5fa"/><stop offset="1" stop-color="#34d399"/></linearGradient></defs>
+          <rect x="22" y="102" width="112" height="116" rx="18" fill="#1e293b" stroke="#79b8ff" stroke-width="3"/>
+          <text x="78" y="148" text-anchor="middle" fill="#eaf0ff" font-size="22" font-family="sans-serif">MASTER</text>
+          <text x="78" y="178" text-anchor="middle" fill="#9eb0d0" font-size="15" font-family="sans-serif">motion / AI</text>
+          <path d="M134 160 H602" stroke="url(#g1)" stroke-width="9" stroke-linecap="round"/>
+          <g fill="#101827" stroke="#86efac" stroke-width="3">
+            <rect x="190" y="78" width="78" height="62" rx="12"/><rect x="330" y="180" width="78" height="62" rx="12"/><rect x="470" y="78" width="78" height="62" rx="12"/>
+          </g>
+          <g fill="#eaf0ff" font-size="15" font-family="sans-serif" text-anchor="middle">
+            <text x="229" y="115">NODE 1</text><text x="369" y="217">NODE 2</text><text x="509" y="115">NODE 10</text>
+          </g>
+          <g stroke="#9eb0d0" stroke-width="2">
+            <path d="M229 140v20"/><path d="M369 180v-20"/><path d="M509 140v20"/>
+          </g>
+          <g fill="#fbbf24">
+            <circle cx="210" cy="266" r="7"/><circle cx="230" cy="266" r="7"/><circle cx="250" cy="266" r="7"/>
+            <circle cx="350" cy="276" r="7"/><circle cx="370" cy="276" r="7"/><circle cx="390" cy="276" r="7"/>
+            <circle cx="490" cy="266" r="7"/><circle cx="510" cy="266" r="7"/><circle cx="530" cy="266" r="7"/>
+          </g>
+        </svg>
+      </div>
+      <div class="body">
+        <div class="badges"><span class="badge plan">planned build</span><span class="badge">robotics</span></div>
+        <h2>Optical Peripheral Nervous System</h2>
+        <p>One continuous plastic-optical-fiber backbone feeds a small number of local controller nodes. Each node can deterministically serve several motors, encoders and sensors while the central controller sends higher-level motion state.</p>
+        <p class="small">The experimental tap is a clamp-on controlled bend with an optical collector. Nodes answer in scheduled slots; a mandatory empty/alive reply makes silence diagnostically meaningful. A node may also become a master for the next segment.</p>
+        <div class="arch">Server → POF backbone → ~10 nodes → ~10 motors/node</div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="art">
+        <svg viewBox="0 0 640 320"><rect x="70" y="68" width="500" height="190" rx="24" fill="#111b31" stroke="#365078" stroke-width="3"/><path d="M95 215 L320 100 L545 215" fill="none" stroke="#79b8ff" stroke-width="5"/><rect x="260" y="168" width="120" height="70" rx="8" fill="#1f2937" stroke="#86efac" stroke-width="3"/><circle cx="198" cy="196" r="24" fill="#17223a" stroke="#fbbf24" stroke-width="3"/><circle cx="442" cy="196" r="24" fill="#17223a" stroke="#fbbf24" stroke-width="3"/><text x="320" y="150" text-anchor="middle" fill="#eaf0ff" font-family="sans-serif" font-size="24">GARAGE</text></svg>
+      </div>
+      <div class="body">
+        <div class="badges"><span class="badge plan">planned build</span><span class="badge">access</span></div>
+        <h2>Garage Gate Body</h2>
+        <p>A bounded access-control body that can combine plate recognition, vehicle appearance, owner proximity and face confirmation without giving the invited intelligence raw authority over the actuator.</p>
+        <p class="small">The gate keeps hard interlocks, local emergency behavior and actuator limits. AISocket exposes observations, identity evidence and the permitted open/close action.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="art">
+        <svg viewBox="0 0 640 320"><rect x="190" y="56" width="260" height="208" rx="32" fill="#111b31" stroke="#79b8ff" stroke-width="3"/><circle cx="320" cy="128" r="36" fill="#17223a" stroke="#86efac" stroke-width="4"/><path d="M320 105v46M298 128h44" stroke="#86efac" stroke-width="4"/><path d="M245 205q75-62 150 0" fill="none" stroke="#fbbf24" stroke-width="5"/><text x="320" y="240" text-anchor="middle" fill="#9eb0d0" font-family="sans-serif" font-size="17">LOCAL VOICE BODY</text></svg>
+      </div>
+      <div class="body">
+        <div class="badges"><span class="badge plan">planned build</span><span class="badge">voice</span></div>
+        <h2>Voice Secretary</h2>
+        <p>A local voice body for reminders, messages, household actions and structured interaction with external intelligence while routine skills remain local and inspectable.</p>
+        <p class="small">The reference build should show microphone/speaker hardware, the passport, permissions, offline behavior and clear separation between conversational interpretation and deterministic actions.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="art">
+        <svg viewBox="0 0 640 320"><rect x="170" y="118" width="300" height="110" rx="24" fill="#111b31" stroke="#79b8ff" stroke-width="3"/><circle cx="220" cy="238" r="38" fill="#17223a" stroke="#86efac" stroke-width="5"/><circle cx="420" cy="238" r="38" fill="#17223a" stroke="#86efac" stroke-width="5"/><rect x="270" y="73" width="100" height="65" rx="14" fill="#1e293b" stroke="#fbbf24" stroke-width="3"/><circle cx="320" cy="105" r="16" fill="#79b8ff"/><path d="M305 105h30M320 90v30" stroke="#0b1020" stroke-width="4"/></svg>
+      </div>
+      <div class="body">
+        <div class="badges"><span class="badge proto">reference demo</span><span class="badge">ESP32</span></div>
+        <h2>Phone + ESP32 Crawler</h2>
+        <p>A small mobile body that demonstrates the simplest AISocket loop: a phone provides rich sensing and connectivity, an ESP32 owns local motor behavior, and intelligence receives a bounded interface rather than raw pins.</p>
+        <p class="small">A useful first public demo because it is inexpensive, visually obvious and easy for another builder to reproduce.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="art">
+        <svg viewBox="0 0 640 320"><path d="M110 240V105l110-55 110 55v135" fill="#111b31" stroke="#365078" stroke-width="3"/><rect x="148" y="138" width="145" height="102" rx="12" fill="#17223a" stroke="#79b8ff" stroke-width="3"/><circle cx="220" cy="184" r="28" fill="#0b1020" stroke="#86efac" stroke-width="4"/><circle cx="220" cy="184" r="9" fill="#79b8ff"/><path d="M350 125q80 35 125 0M350 160q80 35 125 0M350 195q80 35 125 0" fill="none" stroke="#fbbf24" stroke-width="4"/></svg>
+      </div>
+      <div class="body">
+        <div class="badges"><span class="badge plan">planned build</span><span class="badge">vision + audio</span></div>
+        <h2>Home Camera + Audio Body</h2>
+        <p>A household sensing body built around cameras, microphones and local event logic. AISocket defines exactly what can be observed, what can be retained, and what actions an authorized participant may request.</p>
+        <p class="small">The build is intended as a concrete test of privacy boundaries, local preprocessing and the flight-recorder model.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="art">
+        <svg viewBox="0 0 640 320"><rect x="90" y="55" width="460" height="210" rx="22" fill="#111b31" stroke="#365078" stroke-width="3"/><rect x="125" y="90" width="175" height="140" rx="12" fill="#17223a" stroke="#79b8ff" stroke-width="3"/><g fill="#86efac"><circle cx="165" cy="130" r="8"/><circle cx="205" cy="130" r="8"/><circle cx="245" cy="130" r="8"/></g><path d="M145 180h130M145 205h95" stroke="#9eb0d0" stroke-width="4"/><path d="M350 100v120M390 80v140M430 120v100M470 95v125" stroke="#fbbf24" stroke-width="9" stroke-linecap="round"/></svg>
+      </div>
+      <div class="body">
+        <div class="badges"><span class="badge plan">planned build</span><span class="badge">browser</span></div>
+        <h2>Browser MCU Workshop</h2>
+        <p>A browser-first workshop for selecting a supported board, editing firmware and passport data, compiling, flashing, opening telemetry, running self-test and inspecting traces.</p>
+        <p class="small">The browser is the workshop, not the safety boundary: hard limits, watchdogs and emergency behavior stay in the device.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="art">
+        <svg viewBox="0 0 640 320"><rect x="105" y="70" width="430" height="180" rx="18" fill="#0f1a2d" stroke="#365078" stroke-width="3"/><g stroke="#86efac" stroke-width="4" fill="none"><path d="M150 120h100v80h150v-45h95"/><path d="M190 90v60M310 110v105M445 105v90"/></g><g fill="#fbbf24"><circle cx="150" cy="120" r="8"/><circle cx="250" cy="200" r="8"/><circle cx="400" cy="155" r="8"/><circle cx="495" cy="155" r="8"/></g><path d="M165 45v55M475 45v55" stroke="#79b8ff" stroke-width="5"/><circle cx="165" cy="40" r="16" fill="#17223a" stroke="#79b8ff" stroke-width="3"/><circle cx="475" cy="40" r="16" fill="#17223a" stroke="#79b8ff" stroke-width="3"/></svg>
+      </div>
+      <div class="body">
+        <div class="badges"><span class="badge plan">research build</span><span class="badge">investigation</span></div>
+        <h2>OpenPCB Investigator</h2>
+        <p>A two-sided board investigation machine exposing cameras, probes, height measurement and controlled electrical experiments as bounded AISocket tools.</p>
+        <p class="small">Its purpose is not to guess a schematic from appearance alone, but to let intelligence choose discriminating physical tests and preserve the evidence trail.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="art">
+        <svg viewBox="0 0 640 320"><path d="M120 245h400" stroke="#365078" stroke-width="5"/><rect x="135" y="105" width="130" height="125" rx="16" fill="#111b31" stroke="#79b8ff" stroke-width="3"/><path d="M200 105V65h180v40" fill="none" stroke="#86efac" stroke-width="5"/><rect x="330" y="110" width="160" height="120" rx="16" fill="#111b31" stroke="#fbbf24" stroke-width="3"/><path d="M370 140h80M370 170h80M370 200h45" stroke="#9eb0d0" stroke-width="4"/></svg>
+      </div>
+      <div class="body">
+        <div class="badges"><span class="badge plan">planned integration</span><span class="badge">factory</span></div>
+        <h2>CNC / Robot-Arm Integration</h2>
+        <p>A reference industrial body showing how a conventional motion controller, servo drives, encoders, interlocks and diagnostics can be exposed to AISocket without moving the servo loop into the language model.</p>
+        <p class="small">The optical nervous-system project can eventually become one hardware option inside this larger reference build.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="art">
+        <svg viewBox="0 0 640 320"><rect x="120" y="78" width="400" height="165" rx="24" fill="#111b31" stroke="#365078" stroke-width="3"/><path d="M155 205c70-95 130-20 195-85 55-55 90 5 135-15" fill="none" stroke="#79b8ff" stroke-width="6"/><g fill="#86efac"><circle cx="155" cy="205" r="10"/><circle cx="275" cy="160" r="10"/><circle cx="350" cy="120" r="10"/><circle cx="485" cy="105" r="10"/></g><text x="320" y="275" text-anchor="middle" fill="#9eb0d0" font-family="sans-serif" font-size="18">METER → VALVE → TRACE → REPORT</text></svg>
+      </div>
+      <div class="body">
+        <div class="badges"><span class="badge plan">planned build</span><span class="badge">utility</span></div>
+        <h2>Water Utility Body</h2>
+        <p>A small infrastructure example combining meter state, valves, alarms and service procedures under explicit permissions and local fail-safe behavior.</p>
+        <p class="small">It is useful because the physical actions are simple while provenance, diagnostics, offline behavior and authorization are not.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="art">
+        <svg viewBox="0 0 640 320"><rect x="118" y="62" width="404" height="196" rx="20" fill="#111b31" stroke="#365078" stroke-width="3"/><rect x="148" y="95" width="132" height="130" rx="12" fill="#17223a" stroke="#79b8ff" stroke-width="3"/><path d="M165 125h98M165 155h98M165 185h72" stroke="#9eb0d0" stroke-width="4"/><circle cx="390" cy="125" r="36" fill="#17223a" stroke="#86efac" stroke-width="4"/><path d="M390 98v54M363 125h54" stroke="#86efac" stroke-width="4"/><path d="M335 205h115" stroke="#fbbf24" stroke-width="5"/></svg>
+      </div>
+      <div class="body">
+        <div class="badges"><span class="badge plan">planned build</span><span class="badge">software body</span></div>
+        <h2>RS.ge Accounting Assistant</h2>
+        <p>A non-robotic AISocket body demonstrating that the same passport / mandate / trace pattern also applies to software. Routine bookkeeping stays deterministic; interpretation is invited only where needed.</p>
+        <p class="small">A strong counterexample to the idea that AISocket is only about motors: a body may be a bounded software environment as well as a machine.</p>
+      </div>
+    </article>
+
+  </section>
+
+  <footer>
+    <strong>AISocket Project Gallery</strong><br>
+    Each finished project should eventually include: photographs, circuit diagrams, PCB files, firmware, passport examples, 3D models where relevant, BOM, measured test results and a reproducible video build guide.
+  </footer>
+</div>
+</body>
+</html>
