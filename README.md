@@ -5,6 +5,7 @@
 [![Website](https://img.shields.io/badge/Website-googuly.online%2Faisocket-blue)](https://googuly.online/aisocket)
 [![GitHub](https://img.shields.io/badge/GitHub-AISocket-black)](https://github.com/gakelytemp-creator/AISocket)
 [![Forum](https://img.shields.io/badge/Forum-Discussions-green)](https://github.com/gakelytemp-creator/AISocket/discussions)
+[![Gallery](https://img.shields.io/badge/Gallery-Projects-orange)](https://gakelytemp-creator.github.io/AISocket/gallery.html)
 
 **AISocket is an open protocol and developing ecosystem for giving intelligence a formally bounded way to observe, investigate, and act inside devices, software, machines, and experimental environments.**
 
