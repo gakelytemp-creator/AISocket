@@ -793,3 +793,7 @@ Likewise, Noepedia should not replace AISocket's local deterministic control, ha
 Noepedia may internally use many layer-local Daimonion processes in parallel, but that multiplicity is **not part of the AISocket integration contract**. AISocket sees one accountable knowledge-side boundary.
 
 > **AISocket owns contact and action. Noepedia owns persistent epistemic organization.**
+
+### Scientific context for shared Noepedia mechanisms
+
+Where this project touches Noepedia mechanisms such as reconstruction, prediction mismatch, active learning, meta-layers, decoupling, or model-based regulation, earlier scientific precedents and the differences from Noepedia are tracked centrally in [Noepedia — Scientific Context and References](https://github.com/gakelytemp-creator/Noepedia/blob/main/SCIENTIFIC_CONTEXT_AND_REFERENCES.md). This link is for historical and methodological context; it does not imply that those earlier works validate this domain project or Noepedia as a whole.
