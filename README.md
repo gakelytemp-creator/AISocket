@@ -766,3 +766,30 @@ So is an old smartphone, a notebook, and a good question.
 > **AISocket gives intelligence a bounded body.  
 > Noepedia gives knowledge a persistent body.  
 > The next discovery should begin where the last one ended.**
+
+---
+
+## Ecosystem Boundary: AISocket vs Noepedia
+
+AISocket is responsible for **bounded contact with bodies**: declared capabilities, local law, permissions, tools, real-world actions, measurements, and trace production.
+
+Noepedia is responsible for **persistent knowledge work**: object identity across contexts, relation networks, OPEN structures, provenance, revision, consolidation, task-relevant retrieval, and internal Socratic-Daimonion processing.
+
+The boundary is deliberate:
+
+~~~text
+AISocket body
+→ observation / action / trace
+→ Noepedia transaction boundary
+→ knowledge formation / retrieval
+→ task-relevant cut or measurement requirement
+→ AISocket body
+~~~
+
+AISocket should not reproduce Noepedia's internal meta-layers, OPEN-space logic, or Daimonion orchestration.
+
+Likewise, Noepedia should not replace AISocket's local deterministic control, hard timing, interlocks, watchdogs, or Body Law.
+
+Noepedia may internally use many layer-local Daimonion processes in parallel, but that multiplicity is **not part of the AISocket integration contract**. AISocket sees one accountable knowledge-side boundary.
+
+> **AISocket owns contact and action. Noepedia owns persistent epistemic organization.**
